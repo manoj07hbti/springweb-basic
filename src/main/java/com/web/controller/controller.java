@@ -13,10 +13,20 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @Controller
 public class controller {
 
-    @RequestMapping("/")
+    @RequestMapping("/home")
     public String defaultMapping(){
 
         return "index"; // returning index.jsp for view
+    }
+    @RequestMapping("/mypage")
+    public String mypage(){
+
+        return "mypage"; // returning mypage.jsp for view
+    }
+    @RequestMapping("/filename")
+    public String mypageFile(){
+
+        return "filename"; // returning filename.jsp for view
     }
 
 
