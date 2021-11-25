@@ -11,6 +11,7 @@
   <hr>
 
   <h2>You have enter name  as  ${USER_ID}</h2>
+  <h2>You have enter new name  as  ${name}</h2>
 
   <h2>Your Student name is  ${Student.getName()}</h2>
 

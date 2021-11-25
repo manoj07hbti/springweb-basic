@@ -11,7 +11,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 @Controller
-public class controller {
+public class WebController {
+
+
+    @RequestMapping("/new")
+    public String newPage(){
+
+
+        return "newpage";// returning newpage.jsp for view
+    }
 
     @RequestMapping("/home")
     public String defaultMapping(){
@@ -33,6 +41,7 @@ public class controller {
     @RequestMapping(value = "/hello",method = POST)
     public String sayHello(@RequestParam("name") String name, Model model) {
         model.addAttribute("USER_ID", name);  // key and value
+        model.addAttribute("name","JAVA");
 
         Student student=new Student("Rahul",12,"Computer science");
 
@@ -42,6 +51,18 @@ public class controller {
 
 
     }
+
+    @RequestMapping("/mvc")
+    public String myPage(Model model){
+
+        model.addAttribute("language","Java");
+        model.addAttribute("framework","Spring and Spring Boot");
+        model.addAttribute("cloud","Pivotal Coud Foundry");
+        model.addAttribute("devops","JENKINS");
+
+        return "mvcpage";
+    }
+
 
 
 
