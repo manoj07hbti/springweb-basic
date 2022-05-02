@@ -21,6 +21,13 @@ public class WebController {
         return "newpage";// returning newpage.jsp for view
     }
 
+    @RequestMapping("/demo")
+    public String demo(){
+
+
+        return "demo_page";// returning demo_page.jsp for view
+    }
+
     @RequestMapping("/home")
     public String defaultMapping(){
 
