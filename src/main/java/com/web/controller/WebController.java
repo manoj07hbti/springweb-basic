@@ -64,12 +64,21 @@ public class WebController {
 
         model.addAttribute("language","Java");
         model.addAttribute("framework","Spring and Spring Boot");
-        model.addAttribute("cloud","Pivotal Coud Foundry");
+        model.addAttribute("cloud","Pivotal Cloud Foundry");
         model.addAttribute("devops","JENKINS");
 
         return "mvcpage";
     }
 
+    @RequestMapping("/student")
+    public  String demo(Model model){
+
+        model.addAttribute("A","RAHUL");
+        model.addAttribute("B","Mukesh");
+        model.addAttribute("C","Rohit");
+
+        return "student";
+    }
 
 
 
