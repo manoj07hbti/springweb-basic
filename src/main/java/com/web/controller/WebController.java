@@ -14,6 +14,13 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 public class WebController {
 
 
+    @RequestMapping("/demo_file")
+    public String demoFile(){
+
+
+        return "demo_file";// returning demo_file.jsp for view
+    }
+
     @RequestMapping("/new")
     public String newPage(){
 
