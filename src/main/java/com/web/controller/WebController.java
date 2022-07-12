@@ -15,6 +15,11 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @Controller
 public class WebController {
 
+    @RequestMapping("/8_am_page")
+    public String mydemopage(){
+
+        return "8_am_demo_file";// return 8_am_demo_file.jsp
+    }
 
     @RequestMapping("/demo_file")
     public String demoFile() {
