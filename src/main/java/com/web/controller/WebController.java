@@ -113,7 +113,21 @@ public class WebController {
         model.addAttribute("std1",obj);
         Student obj1= new Student("Mukesh",12,"CIVIL");
         model.addAttribute("std2",obj1);
+
         return "student_data";
     }
 
+
+    @RequestMapping("/training")
+    public String courseInfo(Model model){
+
+        model.addAttribute("java","Java Course with core java and Advance java");
+        model.addAttribute("spring","Spring Course");
+        model.addAttribute("springboot","Spring Boot course....");
+
+        Student student= new Student("Raj",33,"CS");
+        model.addAttribute("std",student);
+
+        return "java_course_data";
+    }
 }
