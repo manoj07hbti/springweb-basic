@@ -70,13 +70,12 @@ public class WebController {
 
     @RequestMapping(value = "/hello", method = POST)
     public String sayHello(@RequestParam("name") String name, Model model) {
-        model.addAttribute("USER_ID", name);  // key and value
-        model.addAttribute("name", "JAVA");
+        model.addAttribute("user_key", name);  // key and value
+        model.addAttribute("name_key", "JAVA");
 
         Student student = new Student("Rahul", 12, "Computer science");
 
-        model.addAttribute("Student", student);// key and value
-
+        model.addAttribute("student_key", student);// key and value
         return "hello";// returning hello.jsp view name
 
 
@@ -90,17 +89,38 @@ public class WebController {
         model.addAttribute("cloud", "Pivotal Cloud Foundry");
         model.addAttribute("devops", "JENKINS");
 
-        return "mvcpage";
+        return "mvcpage"; // mvcpage.jsp
     }
+
+    @RequestMapping("/eve_mvc")
+    public String pageWithJava(Model model){
+
+        model.addAttribute("A","This is my first Value for A");
+        model.addAttribute("B","This is my second Value for B");
+        model.addAttribute("C","This is my third Value for C");
+
+        return "eve_mvcpage";
+
+
+    }
+
 
     @RequestMapping("/student")
     public String demo(Model model) {
 
-        model.addAttribute("A", "RAHUL");
-        model.addAttribute("B", "Mukesh");
-        model.addAttribute("C", "Rohit");
+        Student student_obj= new Student("Raj",21,"CS");
 
-        return "student";
+        model.addAttribute("student",student_obj);
+
+        Student student_obj2= new Student("Rahul",22,"IT");
+
+        model.addAttribute("student2",student_obj2);
+
+       /* model.addAttribute("A", "RAHUL");
+        model.addAttribute("B", "Mukesh");
+        model.addAttribute("C", "Rohit");*/
+
+        return "student_eve";
     }
 
     @RequestMapping("/java_data")
