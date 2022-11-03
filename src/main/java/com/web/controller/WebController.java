@@ -16,6 +16,30 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 public class WebController {
 
 
+    @RequestMapping("/8_august_batch")
+    public String page(){
+
+        return "8_august_batch"; // 8_august_batch.jsp
+    }
+
+
+    @RequestMapping("/html_with_data")
+
+    public String myData(Model model){
+
+        model.addAttribute("J","JAVA");
+        model.addAttribute("S","Spring ");
+        model.addAttribute("SB","Spring Boot");
+        model.addAttribute("MS","Microservice");
+
+        Student student= new Student("Raj",1,"CS");
+        model.addAttribute("student",student);
+
+        return "html_with_data";// return html_with_data.jsp file
+
+    }
+
+
     @RequestMapping("/eve_demo")
     public String demoEve(){
 
@@ -71,6 +95,7 @@ public class WebController {
     @RequestMapping(value = "/hello", method = POST)
     public String sayHello(@RequestParam("name") String name, Model model) {
         model.addAttribute("user_key", name);  // key and value
+
         model.addAttribute("name_key", "JAVA");
 
         Student student = new Student("Rahul", 12, "Computer science");
