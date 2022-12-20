@@ -15,6 +15,28 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @Controller
 public class WebController {
 
+    @RequestMapping("/my_java_data")
+    public String javaData(Model model){
+
+        model.addAttribute("A","JAVA");
+        model.addAttribute("B","JAVA8");
+        model.addAttribute("C","Spring boot");
+
+        return "my_java_data"; // my_java_data.jsp
+
+    }
+
+    @RequestMapping("/my_training")
+    public String myTraning(){
+
+        return "mytraining"; // mytraining.jsp
+    }
+
+    @RequestMapping("/sept_eve_batch")
+    public String demoPage(){
+
+        return "sept_evening_batch";// sept_evening_batch.jsp
+    }
 
     @RequestMapping("/8_august_batch")
     public String page(){
