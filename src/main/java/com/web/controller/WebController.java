@@ -118,11 +118,6 @@ public class WebController {
     public String sayHello(@RequestParam("name") String name, Model model) {
         model.addAttribute("user_key", name);  // key and value
 
-        model.addAttribute("name_key", "JAVA");
-
-        Student student = new Student("Rahul", 12, "Computer science");
-
-        model.addAttribute("student_key", student);// key and value
         return "hello";// returning hello.jsp view name
 
 
