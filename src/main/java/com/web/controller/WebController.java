@@ -15,6 +15,16 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 @Controller
 public class WebController {
 
+
+    @RequestMapping("my_web_page")
+    public String myWebPage(){
+
+        return "mywebpage";// mywebpage.jsp
+    }
+
+
+
+
     @RequestMapping("/my_java_data")
     public String javaData(Model model){
 
