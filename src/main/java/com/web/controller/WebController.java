@@ -16,13 +16,23 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 public class WebController {
 
 
-    @RequestMapping("my_web_page")
+    @RequestMapping("/my_web_page")
     public String myWebPage(){
 
         return "mywebpage";// mywebpage.jsp
     }
 
+    @RequestMapping("/mywebpage_data")
+   public String myPageWithData(Model model){
 
+        model.addAttribute("A","Java");
+        model.addAttribute("B","Java 8");
+        model.addAttribute("C","Spring");
+        model.addAttribute("D","Spring boot");
+        model.addAttribute("E","Microservices");
+
+        return "mywebpage_data";//mywebpage_data.jsp
+   }
 
 
     @RequestMapping("/my_java_data")
