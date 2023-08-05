@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<h2>HTML Image</h2>
+<img src="Certificate_Nishant Singh.PNG" alt="Trulli" width="500" height="333">
 
 <h2>Your Student name is : ${s1.getName()} </h2>
 <h2>Your student roll no is :${s1.getRoll_no()}  </h2>
