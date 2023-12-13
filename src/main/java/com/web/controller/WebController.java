@@ -118,7 +118,7 @@ public class WebController {
     @RequestMapping("/home")
     public String defaultMapping() {
 
-        return "index"; // returning index.jsp for view
+        return "index"; // returning index.jsp for view this file will ask you to enter some data and display it to other jsp
     }
 
     @RequestMapping("/mypage")
