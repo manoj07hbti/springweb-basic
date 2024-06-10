@@ -135,8 +135,9 @@ public class WebController {
 
 
     @RequestMapping(value = "/hello", method = POST)
-    public String sayHello(@RequestParam("name") String name, Model model) {
+    public String sayHello(@RequestParam("name") String name,@RequestParam("password") String password, Model model) {
         model.addAttribute("user_key", name);  // key and value
+        model.addAttribute("user_pass", password);
 
         return "hello";// returning hello.jsp view name
 

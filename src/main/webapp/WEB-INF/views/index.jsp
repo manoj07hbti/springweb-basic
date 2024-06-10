@@ -22,6 +22,8 @@
         <tr>
           <td>Enter Your name</td>
           <td><input id="name" name="name"></td>
+          <td>Enter Your password</td>
+          <td><input id="password" name="password"></td>
           <td><input type="submit" value="Submit"></td>
         </tr>
 

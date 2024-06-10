@@ -11,6 +11,7 @@
   <hr>
 
   <h2>You have enter name  as  ${user_key}</h2>
+  <h2>You have enter name  as  ${user_pass}</h2>
 
 
 </body>
